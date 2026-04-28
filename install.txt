@@ -1,0 +1,28 @@
+Finance 2026 — Implementation complete
+59 files across backend and frontend, zero external dependencies beyond what's in package.json.
+
+To get started when MySQL is ready
+1. Configure the backend
+
+
+cd backend
+cp .env.example .env
+# Edit .env: fill in DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, JWT_SECRET
+2. Create the database schema
+
+
+mysql -u root -p < src/config/init.sql
+3. Install and start the backend
+
+
+npm install
+npm run dev   # runs on :3001
+4. Install and start the frontend
+
+
+cd ../frontend
+npm install
+npm run dev   # runs on :5173, proxies /api → :3001
+Open http://localhost:5173 → register an account → you're in.
+
+The backend starts even without a DB connection (it logs a warning), so you can run npm install in both folders and test the frontend shell right now without MySQL.
