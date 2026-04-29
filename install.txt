@@ -1,6 +1,3 @@
-Finance 2026 — Implementation complete
-59 files across backend and frontend, zero external dependencies beyond what's in package.json.
-
 To get started when MySQL is ready
 1. Configure the backend
 
